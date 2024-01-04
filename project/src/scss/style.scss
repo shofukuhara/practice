@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  filter: brightness(10px);
+}
+
+.text {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-image: url("../image/vite.svg");
+  color: white;
+  backdrop-filter: blur(2px);
+}
