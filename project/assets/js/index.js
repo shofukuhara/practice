@@ -1,0 +1,1 @@
+const box=document.querySelector(".box");window.addEventListener("click",(()=>{console.log("")}));window.addEventListener("click",(()=>{console.log("")}));

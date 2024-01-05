@@ -1,0 +1,27 @@
+@use "sass:math";
+// サイズ可変(VW)
+@function pc($size, $viewport: 1440) {
+  $rate: math.div(100, $viewport);
+  @return ($rate * $size * 1vw);
+}
+
+@function sp($size, $viewport: 375) {
+  $rate: math.div(100, $viewport);
+  @return ($rate * $size * 1vw);
+}
+
+// サイズ可変(rem)
+//htmlのフォントサイズ基準
+// $remSize: 16px;
+// @function rem($pixels) {
+//   @return math.div($pixels, $remSize) * 1rem;
+// }
+
+// @function clamp($minFont) {
+//   $minWidth: 375;
+//   $maxWidth: 1920;
+//   $minFontSize: $minFont * 1px;
+//   $fontVw: round($minFont/$minWidth * 100 * 1000) / 1000;
+//   $maxFontSize: round($maxWidth * ($fontVw / 100)) * 1px;
+//   @return clamp(#{$minFontSize}, #{$fontVw}vw, #{$maxFontSize});
+// }

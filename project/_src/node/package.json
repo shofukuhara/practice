@@ -1,0 +1,53 @@
+{
+  "name": "node",
+  "version": "18.16.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pug:d": "pug ../pug/ --out ../../assets --watch --pretty --hierarchy",
+    "pug:p": "pug ../pug/ --out ../../assets --pretty",
+    "format": "prettier --write ../../assets/index.html",
+    "sass:d": "sass  --watch --embed-sources ../scss/style.scss ../../assets/css/style.css",
+    "sass:p": "sass --no-source-map ../scss/style.scss ../../assets/css/style.css",
+    "postcss": "postcss ../../assets/css/style.css --use autoprefixer --replace --no-map",
+    "cleancss": "cleancss ../../assets/css/style.css -o ../../assets/css/style.css",
+    "images": "mkdir -p ../../assets/images",
+    "js:d": "mkdir -p ../../assets/js/ && terser ../js/*.js -o ../../assets/js/index.js",
+    "watch:js": "nodemon --exec \"npm run js:d\" --watch ../js",
+    "js:p": "terser ../js/*.js -o ../../assets/js/index.js",
+    "bs": "browser-sync start --config bs-config.js",
+    "dev": "npm-run-all --parallel images pug:d sass:d js:d watch:js bs",
+    "prod": "npm-run-all --parallel postcss format pug:p sass:p",
+    "prod:mini": "npm-run-all --parallel format js:p pug:p postcss cleancss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "not ie < 11",
+    "Android >= 4",
+    "iOS >= 10"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "clean-css-cli": "^5.6.2",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "fs": "^0.0.1-security",
+    "npm": "^9.8.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.0",
+    "pug": "^3.0.2",
+    "pug-cli": "github:pugjs/pug-cli#master",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "terser": "^5.20.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
