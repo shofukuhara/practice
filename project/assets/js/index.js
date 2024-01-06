@@ -1,1 +1,1 @@
-const box=document.querySelector(".box");window.addEventListener("click",(()=>{console.log("")}));window.addEventListener("click",(()=>{console.log("")}));
+const loading=document.querySelector(".kv-page-01_loading");window.addEventListener("load",(()=>{setTimeout((()=>{loading.classList.add("is-remove")}),1e3)}));const loadingButton=document.querySelector(".kv-page-01-button");loadingButton.addEventListener("click",(()=>{loading.classList.remove("is-remove");setTimeout((()=>{loading.classList.add("is-remove")}),2e3)}));

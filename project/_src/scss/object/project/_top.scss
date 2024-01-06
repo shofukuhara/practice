@@ -1,0 +1,38 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "sass:math";
+
+.top {
+  @include media(sp) {
+  }
+  @include media(pc) {
+    width: pc(1360);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: pc(300);
+  }
+  .top_area {
+    @include media(sp) {
+    }
+    @include media(pc) {
+    }
+  }
+  .top_area {
+    @include media(sp) {
+    }
+    @include media(pc) {
+    }
+  }
+  .top_list {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      display: flex;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+      gap: pc(40);
+    }
+  }
+}

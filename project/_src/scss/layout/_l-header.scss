@@ -1,0 +1,73 @@
+@use "../foundation/setting/function" as *;
+@use "../foundation/setting/mixin" as *;
+@use "../foundation/variable/color" as *;
+
+.l-header {
+  width: 100%;
+  @include media(sp) {
+  }
+  @include media(pc) {
+  }
+  .l-header_area {
+    @include media(sp) {
+    }
+    @include media(pc) {
+    }
+  }
+  .l-header_inner {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .l-header_logo {
+    pointer-events: auto;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      font-size: pc(64);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      position: fixed;
+      top: pc(32);
+      left: pc(32);
+      mix-blend-mode: exclusion;
+      color: $white;
+    }
+  }
+  .l-header_nav {
+    pointer-events: auto;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      position: fixed;
+      top: pc(32);
+      right: pc(32);
+      mix-blend-mode: exclusion;
+      color: $white;
+    }
+  }
+  .l-header_list {
+  }
+  .l-header_item {
+    // &:first-child {
+    //   margin: 0;
+    // }
+    @include media(sp) {
+    }
+    @include media(pc) {
+      // margin-top: pc(8);
+    }
+  }
+  .l-header_link {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      font-size: pc(24);
+      letter-spacing: 0.04em;
+    }
+  }
+}

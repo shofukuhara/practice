@@ -1,11 +1,11 @@
 // メディアクエリ
 @mixin media($point) {
   @if $point == sp {
-    @media (max-width: 640px) {
+    @media (max-width: 750px) {
       @content;
     }
   } @else if $point == pc {
-    @media (min-width: 641px) {
+    @media (min-width: 751px) {
       @content;
     }
   }

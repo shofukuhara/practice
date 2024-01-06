@@ -1,0 +1,26 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+@use "sass:math";
+
+.c-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media(sp) {
+  }
+  @include media(pc) {
+    width: pc(320);
+    height: pc(56);
+    background-color: $black;
+  }
+  .c-button__text {
+    color: $white;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      font-size: pc(32);
+      letter-spacing: 0.05em;
+    }
+  }
+}

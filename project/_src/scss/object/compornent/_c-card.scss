@@ -1,0 +1,59 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+
+.c-card {
+  @include media(sp) {
+  }
+  @include media(pc) {
+    width: pc(310);
+  }
+  .c-card_area {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(310);
+      position: relative;
+      &:hover {
+        img {
+          transform: translate3d(pc(-5), pc(-5), 0);
+          transition: 0.2s ease;
+          transition-property: transform;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: pc(310);
+        height: 100%;
+        background-color: $gray;
+      }
+    }
+    > .i {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: 0.2s ease;
+      transition-property: transform;
+    }
+  }
+  .c-card_date {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      margin-top: pc(8);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      font-size: pc(16);
+    }
+  }
+  .c-card_text {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      margin-top: pc(8);
+      line-height: 1;
+      font-size: pc(16);
+    }
+  }
+}

@@ -19,6 +19,7 @@ module.exports = {
     "files": [
         "../scss/**/*.scss",
         "../pug/*.pug",
+        "../pug/pages/*.pug",
         "../js/*.js"
     ],
     "watchEvents": [

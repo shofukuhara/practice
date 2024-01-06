@@ -1,0 +1,12 @@
+mixin c-button(option = {})
+  - const text = option.text;
+  - const btnClass = option.btnClass;
+  a.c-button(class=btnClass,href="#")
+    span.c-button__text
+      | !{text}
+
+//- 記述例
+//- +c-button({
+//-   btnClass:'__white __terracotta,',
+//-   text: 'items'
+//- })

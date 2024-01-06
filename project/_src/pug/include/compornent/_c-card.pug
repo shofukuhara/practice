@@ -1,0 +1,27 @@
+mixin c-card(option = {})
+  - const text = option.text;
+  - const date = option.date;
+  - const link = option.link;
+  - const img = option.img;
+  - const alt = option.alt;
+  - const cardClass = option.cardClass;
+  a.c-card(class=cardClass,href=link,target="_blank")
+    .c-card_area
+      img.i(src=img,  alt=alt loading="lazy")
+    p.c-card_date
+      | !{date}
+    p.c-card_text
+      | !{text}
+
+
+
+//- 記述例
+//- +c-card({
+//-   cardClass: "__class",
+//-   link: "#",
+//-   img: "path",
+//-   alt: "テキスト",
+//-   date: "2024.01.06",
+//-   text: "テキスト",
+//- })
+

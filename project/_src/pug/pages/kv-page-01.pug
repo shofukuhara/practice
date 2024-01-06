@@ -1,0 +1,26 @@
+- var TITLE = "kv-page-01";
+- var pageType = "sub";
+include ../include/config/_config
+include ../include/compornent/_c-button
+
+doctype html
+html(lang="ja")
+  include ../include/mixin/_head
+    title
+      | #{TITLE}
+  body
+    include ../include/layout/_header
+    .kv-page-01
+      .kv-page-01_loading
+        .kv-page-01_inner
+          .kv-page-01_loader
+      .kv-page-01_wrapper
+        .kv-page-01_area
+          p.kv-page-01_text
+            | クリックするとアニメーションが実行されます。
+          .kv-page-01_buttonArea
+            +c-button({
+              btnClass:'kv-page-01-button',
+              text: 'click'
+            })
+    include ../include/mixin/_script
