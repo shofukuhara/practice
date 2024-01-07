@@ -17,9 +17,16 @@ html(lang="ja")
             +c-card({
               cardClass: "__kv",
               link: "/pages/kv-page-01.html",
-              img: IMG_PATH + "image.jpg",
-              alt: "kv画像",
+              title: "Kv",
               date: "2024.01.06",
               text: "loadingアニメーション",
+            })
+          li.top_item
+            +c-card({
+              cardClass: "__scroll",
+              link: "/pages/scroll-page-01.html",
+              title: "Scroll",
+              date: "2024.01.07",
+              text: "IntersectionObserver",
             })
     include ./include/mixin/_script

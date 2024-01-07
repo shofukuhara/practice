@@ -1,5 +1,15 @@
 //- imageパス
-- var IMG_PATH = "./images/";
+
+
+- var pageType = "top";
+- var pageType = "sub";
+
+if pageType == 'top'
+  - var IMG_PATH = "./images/";
+else if pageType == 'sub'
+  - var IMG_PATH = "../images/";
+else
+  - var IMG_PATH = "./images/";
 //- タイムスタンプ
 //- - var DATE_NOW = Date.now();
 //- //リンクパス

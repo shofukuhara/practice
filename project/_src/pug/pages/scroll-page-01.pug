@@ -1,0 +1,36 @@
+- var TITLE = "scroll-page-01";
+- var pageType = "sub";
+include ../include/config/_config
+include ../include/compornent/_c-button
+
+doctype html
+html(lang="ja")
+  include ../include/mixin/_head
+    title
+      | #{TITLE}
+  body
+    include ../include/layout/_header
+    .scroll-page-01
+      .scroll-page-01_wrapper
+        .scroll-page-01_area
+          p.scroll-page-01_text
+            | 下にスクロールすると画像がフェードインします。
+            br
+            | ボタンをクリックするとアニメーションがリセットされます。
+          .scroll-page-01_buttonArea
+            +c-button({
+              btnClass:'scroll-page-01-button',
+              text: 'click'
+            })
+      .scroll-page-01_imageArea
+        .scroll-page-01_image
+          img.i(src=IMG_PATH + "image_01.jpg" alt="" loading="lazy")
+        .scroll-page-01_image
+          img.i(src=IMG_PATH + "image_02.jpg" alt="" loading="lazy")
+        .scroll-page-01_image
+          img.i(src=IMG_PATH + "image_03.jpg" alt="" loading="lazy")
+        .scroll-page-01_image
+          img.i(src=IMG_PATH + "image_04.jpg" alt="" loading="lazy")
+        .scroll-page-01_image
+          img.i(src=IMG_PATH + "image_05.jpg" alt="" loading="lazy")
+    include ../include/mixin/_script

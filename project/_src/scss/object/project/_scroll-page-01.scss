@@ -1,0 +1,66 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "sass:math";
+
+.scroll-page-01 {
+  .scroll-page-01_wrapper {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(1360);
+      height: calc(100vh - pc(100));
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+  .scroll-page-01_text {
+    text-align: center;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      font-size: pc(16);
+    }
+  }
+  .scroll-page-01_buttonArea {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(320);
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: pc(32);
+    }
+  }
+  .scroll-page-01_imageArea {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      margin-top: pc(200);
+    }
+  }
+  .scroll-page-01_image {
+    width: pc(600);
+    height: pc(400);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: pc(80);
+    opacity: 0;
+    transition: 0.5s ease;
+    transition-property: opacity;
+    &.is-fade {
+      opacity: 1;
+      transition: 0.5s ease;
+      transition-property: opacity;
+    }
+    > .i {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
