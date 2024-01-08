@@ -4,30 +4,36 @@
 
 .c-card {
   @include media(sp) {
+    width: sp(320);
   }
   @include media(pc) {
     width: pc(310);
   }
   .c-card_wrapper {
-    width: pc(310);
-    height: pc(200);
-    position: relative;
-    &:hover {
-      .c-card_bg {
-        background-color: $black;
-        transition: 0.5s ease;
-        transition-property: background-color;
-      }
-      .c-card_title {
-        color: $white;
-        transition: 0.5s ease;
-        transition-property: color;
+    @include media(sp) {
+      width: sp(320);
+      height: sp(220);
+      position: relative;
+    }
+    @include media(pc) {
+      width: pc(310);
+      height: pc(200);
+      position: relative;
+      &:hover {
+        .c-card_bg {
+          background-color: $black;
+          transition: 0.5s ease;
+          transition-property: background-color;
+        }
+        .c-card_title {
+          color: $white;
+          transition: 0.5s ease;
+          transition-property: color;
+        }
       }
     }
   }
   .c-card_bg {
-    width: pc(310);
-    height: pc(200);
     background-color: $white;
     border: 1px solid $black;
     position: absolute;
@@ -37,29 +43,46 @@
     justify-content: center;
     transition: 0.5s ease;
     transition-property: background-color;
+    @include media(sp) {
+      width: sp(320);
+      height: sp(220);
+    }
+    @include media(pc) {
+      width: pc(310);
+      height: pc(200);
+    }
   }
   .c-card_title {
-    font-size: pc(32);
     letter-spacing: 0.04em;
     transition: 0.5s ease;
     transition-property: color;
+    @include media(sp) {
+      font-size: sp(32);
+    }
+    @include media(pc) {
+      font-size: pc(32);
+    }
   }
   .c-card_date {
+    letter-spacing: 0.04em;
+    line-height: 1;
     @include media(sp) {
+      margin-top: sp(8);
+      font-size: sp(16);
     }
     @include media(pc) {
       margin-top: pc(8);
-      letter-spacing: 0.04em;
-      line-height: 1;
       font-size: pc(16);
     }
   }
   .c-card_text {
+    line-height: 1;
     @include media(sp) {
+      margin-top: sp(8);
+      font-size: sp(16);
     }
     @include media(pc) {
       margin-top: pc(8);
-      line-height: 1;
       font-size: pc(16);
     }
   }

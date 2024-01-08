@@ -37,32 +37,47 @@
     border-left: 2px solid #fff;
     -webkit-animation: load 1.1s infinite linear;
     animation: load 1.1s infinite linear;
-    width: pc(50);
-    height: pc(50);
+    @include media(sp) {
+      width: sp(50);
+      height: sp(50);
+    }
+    @include media(pc) {
+      width: pc(50);
+      height: pc(50);
+    }
   }
   .kv-page-01_wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     @include media(sp) {
+      width: 100%;
+      height: calc(100vh - sp(100));
     }
     @include media(pc) {
       width: pc(1360);
       height: calc(100vh - pc(100));
-      margin-right: auto;
-      margin-left: auto;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
     }
   }
   .kv-page-01_text {
-    text-align: center;
     @include media(sp) {
+      font-size: sp(16);
+      padding-right: sp(16);
+      padding-left: sp(16);
     }
     @include media(pc) {
+      text-align: center;
       font-size: pc(16);
     }
   }
   .kv-page-01_buttonArea {
     @include media(sp) {
+      width: sp(260);
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: sp(32);
     }
     @include media(pc) {
       width: pc(320);

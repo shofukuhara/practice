@@ -6,49 +6,66 @@
 
 .scroll-page-01 {
   .scroll-page-01_wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     @include media(sp) {
+      width: 100%;
+      height: calc(100vh - sp(100));
     }
     @include media(pc) {
       width: pc(1360);
       height: calc(100vh - pc(100));
-      margin-right: auto;
-      margin-left: auto;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
     }
   }
   .scroll-page-01_text {
-    text-align: center;
     @include media(sp) {
+      font-size: sp(16);
+      padding-right: sp(16);
+      padding-left: sp(16);
     }
     @include media(pc) {
+      text-align: center;
       font-size: pc(16);
     }
   }
   .scroll-page-01_buttonArea {
+    margin-right: auto;
+    margin-left: auto;
     @include media(sp) {
+      width: sp(260);
+      margin-top: sp(32);
     }
     @include media(pc) {
       width: pc(320);
-      margin-right: auto;
-      margin-left: auto;
       margin-top: pc(32);
     }
   }
   .scroll-page-01_imageArea {
     @include media(sp) {
+      margin-top: sp(200);
     }
     @include media(pc) {
       margin-top: pc(200);
     }
   }
   .scroll-page-01_image {
-    width: pc(600);
-    height: pc(400);
+    @include media(sp) {
+      width: sp(320);
+      height: sp(240);
+      margin-top: sp(80);
+    }
+    @include media(pc) {
+      width: pc(600);
+      height: pc(400);
+      margin-top: pc(80);
+    }
+
     margin-right: auto;
     margin-left: auto;
-    margin-top: pc(80);
+
     opacity: 0;
     transition: 0.5s ease;
     transition-property: opacity;

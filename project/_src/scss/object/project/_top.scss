@@ -6,6 +6,10 @@
 
 .top {
   @include media(sp) {
+    width: sp(320);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: sp(300);
   }
   @include media(pc) {
     width: pc(1360);
@@ -27,6 +31,10 @@
   }
   .top_list {
     @include media(sp) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: sp(40);
     }
     @include media(pc) {
       display: flex;

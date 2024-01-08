@@ -25,29 +25,36 @@
   }
   .l-header_logo {
     pointer-events: auto;
+    mix-blend-mode: exclusion;
+    position: fixed;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: $white;
+    z-index: 10;
     @include media(sp) {
+      font-size: sp(40);
+      top: sp(16);
+      left: sp(16);
     }
     @include media(pc) {
       font-size: pc(64);
-      letter-spacing: 0.04em;
-      line-height: 1;
-      position: fixed;
       top: pc(32);
       left: pc(32);
-      mix-blend-mode: exclusion;
-      color: $white;
     }
   }
   .l-header_nav {
     pointer-events: auto;
+    mix-blend-mode: exclusion;
+    color: $white;
+    position: fixed;
+    z-index: 10;
     @include media(sp) {
+      top: sp(16);
+      right: sp(16);
     }
     @include media(pc) {
-      position: fixed;
       top: pc(32);
       right: pc(32);
-      mix-blend-mode: exclusion;
-      color: $white;
     }
   }
   .l-header_list {
@@ -63,11 +70,12 @@
     }
   }
   .l-header_link {
+    letter-spacing: 0.04em;
     @include media(sp) {
+      font-size: sp(24);
     }
     @include media(pc) {
       font-size: pc(24);
-      letter-spacing: 0.04em;
     }
   }
 }

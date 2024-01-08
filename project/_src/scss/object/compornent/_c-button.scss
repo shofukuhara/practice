@@ -7,20 +7,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $black;
   @include media(sp) {
+    width: sp(260);
+    height: sp(56);
   }
   @include media(pc) {
     width: pc(320);
     height: pc(56);
-    background-color: $black;
   }
   .c-button__text {
     color: $white;
+    letter-spacing: 0.05em;
     @include media(sp) {
+      font-size: sp(24);
     }
     @include media(pc) {
       font-size: pc(32);
-      letter-spacing: 0.05em;
     }
   }
 }
