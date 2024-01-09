@@ -29,18 +29,19 @@
       width: pc(500);
       height: pc(300);
       margin: auto;
-      padding-top: 40px;
+      padding-top: pc(120);
     }
   }
   .swiper-wrapper {
+    // transition-timing-function: linear;
     @include media(sp) {
     }
     @include media(pc) {
       width: 100%;
-      height: pc(300) !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: pc(200) !important;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
     }
   }
   .swiper-slide {
@@ -54,6 +55,8 @@
     @include media(pc) {
       width: pc(200) !important;
       height: pc(200) !important;
+      margin-left: auto;
+      margin-right: auto;
     }
     > .i {
       border-radius: 50%;
@@ -64,11 +67,12 @@
   }
   .swiper-slide-active {
     > .image {
-      width: pc(300) !important;
-      height: pc(300) !important;
+      // width: pc(300) !important;
+      // height: pc(300) !important;
+      scale: 1.2;
       margin-right: auto;
       margin-left: auto;
-      margin-top: -40px;
+      margin-top: pc(-100);
     }
   }
 }

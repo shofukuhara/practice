@@ -3,6 +3,7 @@ if (document.URL.match("/pages/slider-page-01.html")) {
     spaceBetween: 50,
     slidesPerView: 2,
     loop: true,
+    // speed: 1500,
     loopAdditionalSlides: 1,
     centeredSlides: true,
     navigation: {
