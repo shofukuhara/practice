@@ -1,0 +1,47 @@
+- var TITLE = "slider-page-01";
+- var pageType = "sub";
+include ../include/config/_config
+include ../include/compornent/_c-button
+
+doctype html
+html(lang="ja")
+  include ../include/mixin/_head
+    title
+      | #{TITLE}
+  body
+    include ../include/layout/_header
+    .slider-page-01
+      .slider-page-01_area
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_01.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_02.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_03.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_04.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_05.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_01.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_02.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_03.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_04.jpg" alt="" loading="lazy")
+            .swiper-slide
+              .image
+                img.i(src=IMG_PATH + "image_05.jpg" alt="" loading="lazy")
+    include ../include/mixin/_script

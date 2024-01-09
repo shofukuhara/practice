@@ -1,0 +1,74 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "sass:math";
+
+.slider-page-01 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .slider-page-01_area {
+    height: 100%;
+    background-color: $rightGray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(sp) {
+    }
+    @include media(pc) {
+    }
+  }
+  .swiper {
+    overflow: hidden;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(500);
+      height: pc(300);
+      margin: auto;
+      padding-top: 40px;
+    }
+  }
+  .swiper-wrapper {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: 100%;
+      height: pc(300) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .swiper-slide {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+  .image {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(200) !important;
+      height: pc(200) !important;
+    }
+    > .i {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-slide-active {
+    > .image {
+      width: pc(300) !important;
+      height: pc(300) !important;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: -40px;
+    }
+  }
+}
