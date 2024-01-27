@@ -1,0 +1,39 @@
+- var TITLE = "scroll-page-02";
+- var pageType = "sub";
+include ../include/config/_config
+include ../include/compornent/_c-button
+
+doctype html
+html(lang="ja")
+  include ../include/mixin/_head
+    title
+      | #{TITLE}
+  body
+    include ../include/layout/_header
+    .scroll-page-02
+      .scroll-page-02_wrapper
+        .scroll-page-02_area
+          p.scroll-page-02_text
+            | 下にスクロールすると分割されたテキストがフェードインします。
+            br.pc-only
+            | ボタンをクリックするとアニメーションがリセットされます。
+          .scroll-page-02_buttonArea
+            +c-button({
+              btnClass:'scroll-page-01-button',
+              text: 'click'
+            })
+      .scroll-page-02_textArea
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+      .scroll-page-02_textArea
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+        p.scroll-page-02_chartext
+          | テキストです。テキストです。テキストです。テキストです。
+    include ../include/mixin/_script

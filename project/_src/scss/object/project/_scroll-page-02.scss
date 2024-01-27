@@ -1,0 +1,94 @@
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "sass:math";
+
+.scroll-page-02 {
+  .scroll-page-02_wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include media(sp) {
+      width: 100%;
+      height: calc(100vh - sp(100));
+    }
+    @include media(pc) {
+      width: pc(1360);
+      height: calc(100vh - pc(100));
+    }
+  }
+  .scroll-page-02_text {
+    @include media(sp) {
+      font-size: sp(16);
+      padding-right: sp(16);
+      padding-left: sp(16);
+    }
+    @include media(pc) {
+      text-align: center;
+      font-size: pc(16);
+    }
+  }
+  .scroll-page-02_buttonArea {
+    margin-right: auto;
+    margin-left: auto;
+    @include media(sp) {
+      width: sp(260);
+      margin-top: sp(32);
+    }
+    @include media(pc) {
+      width: pc(320);
+      margin-top: pc(32);
+    }
+  }
+  .scroll-page-02_textArea {
+    margin-right: auto;
+    margin-left: auto;
+    @include media(sp) {
+      margin-top: sp(200);
+      margin-bottom: sp(200);
+      width: sp(320);
+    }
+    @include media(pc) {
+      margin-top: pc(200);
+      margin-bottom: pc(200);
+      width: pc(880);
+    }
+  }
+  .scroll-page-02_chartext {
+    overflow: hidden;
+    position: relative;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include media(sp) {
+      margin-top: sp(32);
+    }
+    @include media(pc) {
+      margin-top: pc(32);
+    }
+    &.is-active {
+      .scroll-page-02_js_chartext {
+      }
+    }
+  }
+  .scroll-page-02_js_chartext {
+    letter-spacing: 0.05em;
+    transform: translateY(100%);
+    transition: transform 0.5s, opacity 0.8s cubic-bezier(0.17, 0.84, 0.44, 1);
+    display: inline-block;
+    opacity: 0;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      font-size: pc(24);
+    }
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: transform 0.5s, opacity 0.8s cubic-bezier(0.17, 0.84, 0.44, 1);
+    }
+  }
+}
